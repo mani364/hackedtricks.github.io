@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>hackedtricks</title>
   </head>
-  <body onload='particles(opacity=65, numParticles=10, sizeMultiplier=5, width=1, connections=true, connectionDensity=11, noBounceH=false, noBounceV=false, speed=15, avoidMouse=false, hover=false)'>
+  <body onload='particles(opacity=65, numParticles=10, sizeMultiplier=5, width=1, connections=true, connectionDensity=11, noBounceH=false, noBounceV=false, speed=15, avoidMouse=false, hover=false)', Clearform()>
     <div class="loader"></div>
     <div class="container-fluid">
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -56,7 +56,7 @@
     <h5 class="card-title">CONTACT ME</h5>
   </div>
   <div class="card-body">
-    <form action="https://reptant-structure.000webhostapp.com/contact.php" method="POST">
+    <form name="contactform" action="https://reptant-structure.000webhostapp.com/contact.php" method="POST">
       <div class="form-group">
         <input type="text" id="fname" name="firstname" placeholder="first name">
             </div>
@@ -154,6 +154,9 @@ var myevent = (isNS) ? e : event;
 var eventbutton = (isNS) ? myevent.which : myevent.button;
 if((eventbutton==2)||(eventbutton==3)) return false;
 }
+  function Clearform(){
+    document.contactform.reset();
+  }
 document.oncontextmenu = mischandler;
 document.onmousedown = mousehandler;
 document.onmouseup = mousehandler;
